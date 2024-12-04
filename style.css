@@ -1,0 +1,514 @@
+/*Google fonts, colors, and other resources
+font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Mono', monospace;
+*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono&display=swap');
+
+*{
+  box-sizing:border-box;
+}
+
+
+
+.container{
+display:grid;
+grid-template-columns: repeat(1fr,5);
+grid-template-areas:"h h h h"
+                    "n n n n"
+                    "i i i i"
+                    "i i i i"
+                    "cd cd cd cd"
+                    "cd cd cd cd"
+                    "cm cm cm cm"
+                    "cm cm cm cm"
+                    "f f f f";
+
+}
+
+
+/*header/nav style*/
+.header{
+grid-area:h;
+}
+
+.header h1{
+  text-align:center;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.topnav{
+grid-area:n;
+font-family: "Roboto Mono", monospace;
+background-color: #0c6b68;
+overflow: hidden;
+}
+.topnav a {
+      float: right;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+      }
+
+    .topnav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+    .topnav a.active {
+      background-color: #0d9c90;
+      color: white;
+    }
+    .topnav .icon {
+      display: none;
+    }
+    .topnav a.navbar-brand{
+        float: left;
+        padding: 2px;
+}
+
+
+/* Index page style */
+.info{
+grid-area:i;
+background-color:#f2f2f2;
+}
+
+.info h1, p{
+  text-align:center;
+}
+
+.info h1{
+  font-size: 34px;
+  font-weight: 800px;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.info p{
+  margin-left:130px;
+  margin-right:130px;
+  font-size: 22px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.projects h2{
+  text-align:center;
+  font-size:28px;
+  font-family: 'Roboto Mono', monospace;
+}
+
+#cyberstartp{
+  display:flex;
+  padding-bottom:80px;
+  padding-top:30px;
+  justify-content:center;
+}
+
+#cyberstart {
+  display:inline-block;
+  width:500px;
+  float:left;
+}
+
+#launched{
+  display:inline-block;
+  width:500px;
+  float:left;
+}
+#launchedp{
+  display:flex;
+  padding-bottom:80px;
+  padding-top:30px;
+}
+
+/*The about page style*/
+.clubdesc{
+  background-color:#f2f2f2;
+  grid-area:cd;
+  width:100%;
+}
+
+.clubmembers{
+grid-area:cm;
+background-color:#f2f2f2;
+
+}
+
+.clubmembers h1, h2, h3{
+  text-align:center;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.clubmembers p{
+  text-align: left;
+  font-family: 'Roboto', sans-serif;
+}
+
+#Kristiphoto{
+  width: 200px;
+  display:inline-block;
+  margin-left:98px;
+  margin-right:10px;
+  margin-bottom:10px;
+  z-index:-1;
+}
+#Kristiinfo{
+  /*visibilty hidden*/
+  position:absolute;
+  text-align: center;
+  margin-left:50px;
+  margin-right:50px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  padding-top: 10px;
+  border: solid 1px black;
+  border-radius: 10px;
+  visibility: hidden;
+  box-shadow: 2px 2px 15px #4d4d4d;
+}
+
+#Kristiphoto:hover{
+  box-shadow: 2px 2px 15px #4d4d4d;
+    opacity:30%;
+    transition: .5s ease;
+}
+#Kristiphoto:not(:hover){
+  box-shadow: 0;
+  opacity:100%;
+  transition: .5s ease;
+}
+#KristiName{
+  /*hidden until hovered over photo*/
+  position:absolute;
+  z-index:1;
+  top: 630px;
+  left:180px;
+  visibility:hidden;
+  text-align:center;
+  font-family: 'Roboto Mono', monospace;
+  color: #0c6b68;
+}
+
+
+
+
+
+#Ashleighphoto{
+  width: 200px;
+  margin-right:10px;
+  display:inline-block;
+  z-index:-1;
+}
+#Ashleighinfo{
+  /*visibilty hidden*/
+  position:absolute;
+  text-align: center;
+  margin-left:50px;
+  margin-right:50px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  padding-top: 10px;
+  visibility: hidden;
+  border: solid 1px black;
+  border-radius: 10px;
+  box-shadow: 2px 2px 15px #4d4d4d;
+}
+#Ashleighphoto:hover{
+  box-shadow: 2px 2px 15px #4d4d4d;
+    opacity:30%;
+    transition: .5s ease;
+}
+#Ashleighphoto:not(:hover){
+  box-shadow: 0;
+    opacity:100%;
+    transition: .5s ease;
+}
+#AshleighName{
+    /*hidden until hovered over photo*/
+  position:absolute;
+  z-index:1;
+  top: 630px;
+  left:180px;
+  visibility:hidden;
+  text-align:center;
+  font-family: 'Roboto Mono', monospace;
+}
+
+
+
+#Maryphoto{
+  width: 200px;
+  margin-right:10px;
+  display:inline-block;
+  z-index:-1;
+}
+#Maryinfo{
+  /*visibilty hidden*/
+  position:absolute;
+  text-align: center;
+  margin-left:50px;
+  margin-right:50px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  padding-top: 10px;
+  visibility: hidden;
+  border: solid 1px black;
+  border-radius: 10px;
+  box-shadow: 2px 2px 15px #4d4d4d;
+}
+#Maryphoto:hover{
+  box-shadow: 2px 2px 15px #4d4d4d;
+  opacity:30%;
+  transition: .5s ease;
+}
+#Maryphoto:not(:hover){
+  box-shadow: 0;
+    opacity:100%;
+    transition: .5s ease;
+}
+#MaryName{
+    /*hidden until hovered over photo*/
+  position:absolute;
+  z-index:1;
+  top: 630px;
+  left:180px;
+  visibility:hidden;
+  text-align:center;
+  font-family: 'Roboto Mono', monospace;
+}
+
+
+#Gloriaphoto{
+  width: 200px;
+  margin-right:10px;
+  display:inline-block;
+  z-index:-1;
+}
+#Gloriainfo{
+  /*visibilty hidden*/
+  position:absolute;
+  text-align: center;
+  margin-left:50px;
+  margin-right:50px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  padding-top: 10px;
+  visibility: hidden;
+  border: solid 1px black;
+  border-radius: 10px;
+  box-shadow: 2px 2px 15px #4d4d4d;
+}
+#Gloriaphoto:hover{
+  box-shadow: 2px 2px 15px #4d4d4d;
+  opacity:30%;
+  transition: .5s ease;
+}
+#Gloriaphoto:not(:hover){
+  box-shadow: 0;
+    opacity:100%;
+    transition: .5s ease;
+}
+#GloriaName{
+    /*hidden until hovered over photo*/
+  position:absolute;
+  z-index:1;
+  top: 630px;
+  left:180px;
+  visibility:hidden;
+  text-align:center;
+  font-family: 'Roboto Mono', monospace;
+}
+
+
+
+#Gabbyphoto{
+  width: 200px;
+  display:inline-block;
+  margin-right:10px;
+  margin-bottom:10px;
+  z-index:-1;
+}
+#Gabbyinfo{
+  /*visibilty hidden*/
+  position:absolute;
+  text-align: center;
+  margin-left:50px;
+  margin-right:50px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  padding-top: 10px;
+  border: solid 1px black;
+  border-radius: 10px;
+  visibility: hidden;
+  box-shadow: 2px 2px 15px #4d4d4d;
+}
+#Gabbyphoto:hover{
+  box-shadow: 2px 2px 15px #4d4d4d;
+    opacity:30%;
+    transition: .5s ease;
+}
+#Gabbyphoto:not(:hover){
+  box-shadow: 0;
+    opacity:100%;
+    transition: .5s ease;
+}
+#GabbyName{
+    /*hidden until hovered over photo*/
+  position:absolute;
+  z-index:1;
+  top: 630px;
+  left:180px;
+  visibility:hidden;
+  text-align:center;
+  font-family: 'Roboto Mono', monospace;
+}
+
+
+#Anikaphoto{
+  width: 200px;
+  margin-right:10px;
+  display:inline-block;
+  margin-bottom:10px;
+  z-index:-1;
+}
+#Anikainfo{
+  /*visibilty hidden*/
+  position:absolute;
+  text-align: center;
+  margin-left:50px;
+  margin-right:50px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  padding-top: 10px;
+  border: solid 1px black;
+  border-radius: 10px;
+  visibility: hidden;
+  box-shadow: 2px 2px 15px #4d4d4d;
+}
+#Anikaphoto:hover{
+  box-shadow: 2px 2px 15px #4d4d4d;
+    opacity:30%;
+    transition: .5s ease;
+}
+#Anikaphoto:not(:hover){
+  box-shadow: 0;
+    opacity:100%;
+    transition: .5s ease;
+}
+#AnikaName{
+    /*hidden until hovered over photo*/
+  position:absolute;
+  z-index:1;
+  top: 630px;
+  left:180px;
+  visibility:hidden;
+  text-align:center;
+  font-family: 'Roboto Mono', monospace;
+}
+
+
+
+#Meglanphoto{
+  width: 200px;
+  display:inline-block;
+  margin-bottom:10px;
+  z-index:-1;
+}
+#Meglaninfo{
+  /*visibilty hidden*/
+  position:absolute;
+  text-align: center;
+  margin-left:50px;
+  margin-right:50px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  padding-top: 10px;
+  visibility: hidden;
+  border: solid 1px black;
+  border-radius: 10px;
+  box-shadow: 2px 2px 15px #4d4d4d;
+}
+#Meglanphoto:hover{
+  box-shadow: 2px 2px 15px #4d4d4d;
+    opacity:30%;
+    transition: .5s ease;
+}
+#Meglanphoto:not(:hover){
+  box-shadow: 0;
+    opacity:100%;
+    transition: .5s ease;
+}
+#MeglanName{
+    /*hidden until hovered over photo*/
+  position:absolute;
+  z-index:1;
+  top: 630px;
+  left:180px;
+  visibility:hidden;
+  text-align:center;
+  font-family: 'Roboto Mono', monospace;
+}
+
+
+
+#Priyankaphoto{
+  width: 200px;
+  margin-left:98px;
+  display:inline-block;
+  margin-right:10px;
+  z-index:-1;
+}
+#Priyankainfo{
+  /*visibilty hidden*/
+  position:absolute;
+  text-align: center;
+  margin-left:50px;
+  margin-right:50px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  padding-top: 10px;
+  visibility: hidden;
+  border: solid 1px black;
+  border-radius: 10px;
+  box-shadow: 2px 2px 15px #4d4d4d;
+}
+#Priyankaphoto:hover{
+  box-shadow: 2px 2px 15px #4d4d4d;
+    opacity:30%;
+    transition: .5s ease;
+}
+#Priyankaphoto:not(:hover){
+  box-shadow: 0;
+    opacity:100%;
+    transition: .5s ease;
+}
+#PriyankaName{
+    /*hidden until hovered over photo*/
+  position:absolute;
+  z-index:1;
+  top: 630px;
+  left:180px;
+  visibility:hidden;
+  text-align:center;
+  font-family: 'Roboto Mono', monospace;
+}
+
+
+
+.footer{
+  grid-area:f;
+text-align:center;
+font-size:10px;
+background-color:#0C6B68;
+color:#f2f2f2;
+}
+
+.footer a{
+  text-decoration:none;
+}
+
+.footer img{
+  padding:10px;
+
+}
